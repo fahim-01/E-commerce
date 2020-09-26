@@ -25,7 +25,7 @@ SECRET_KEY = 'ak=fi60_s*#=o8d$cm5m1q2ue*9ftjt1vfq9v()we4wjt$p-s#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fahim01.pythonanywhere.com']
 
 
 # Application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   
+
 ]
 
 MIDDLEWARE = [
@@ -118,7 +118,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+STATIC_ROOT = '/home/fahim01/E-commerce/eshop/shop/static'
 STATIC_URL = '/static/'
 
 #managing media
