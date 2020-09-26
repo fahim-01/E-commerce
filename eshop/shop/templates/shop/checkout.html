@@ -21,7 +21,7 @@
     </div>
     <div class="col my-4">
         <h2>Step 2 - Enter Address & Other Details:</h2>
-        <form method="post" action="/shop/checkout/">{% csrf_token %}
+        <form method="post" action="/checkout/">{% csrf_token %}
             <input type="hidden" name="itemsJson" id="itemsJson">
             <input type="hidden" name="amount" id="amount">
             <div class="form-row">
@@ -65,8 +65,8 @@
                   Payment Status
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="/shop/checkout/" style="color: darkred;"> Cash On Delivery</a>
-                  <a class="dropdown-item" href="/shop/contact/" style="color: darkred;">bKash(0177834646*)</a>
+                  <a class="dropdown-item" href="/checkout/" style="color: darkred;"> Cash On Delivery</a>
+                  <a class="dropdown-item" href="/contact/" style="color: darkred;">bKash(0177834646*)</a>
                   <a class="dropdown-item" href="#" style="color: darkred;">PayTm(Currently Unavailable)</a>
                 </div>
               </div>
@@ -109,7 +109,7 @@ $('#itemsJson').val(JSON.stringify(cart));
 {% if thank %}
 alert('Thanks for ordering with us. Your order is is {{id}}. Use it to track your order using our order tracker');
 localStorage.clear();
-document.location = "/shop";
+document.location = "/";
 {% endif %}
 $('#amount').val($('#totalPrice').html())
 </script>

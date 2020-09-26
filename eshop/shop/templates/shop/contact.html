@@ -3,7 +3,7 @@
 {% block body %} 
 <div class="container my-3">
     <h3>Contact Us Regarding any Query</h3> 
-    <form action="/shop/contact/" method="POST"> {% csrf_token %}
+    <form action="/contact/" method="POST"> {% csrf_token %}
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your name">
@@ -34,7 +34,7 @@
 {% if thank %}
 alert('Thanks for contacting us. We will get back to You soon!');
 
-document.location = "/shop/contact";
+document.location = "/";
 {% endif %}
 </script>
 {% endblock %} 
